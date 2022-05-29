@@ -112,3 +112,18 @@ struct AppData: Codable {
 }
 
 var testData: AppData = .init()
+
+func imageNames() -> [String] {
+    let fm = FileManager.default
+    let path = Bundle.main.resourcePath!
+    let items = try! fm.contentsOfDirectory(atPath: path)
+    var pictures = [String]()
+
+    for item in items {
+        if item.hasSuffix("JPG") || item.hasSuffix("HEIC") {
+            pictures.append(item)
+        }
+    }
+
+    return pictures
+}

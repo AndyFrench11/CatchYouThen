@@ -9,19 +9,21 @@ struct CatchYouThenApp: App {
             CircleView()
                 .edgesIgnoringSafeArea([.top, .bottom])
                 .environmentObject(store)
-                .task {
-                    do {
-                        store.appData = try await Store.load()
-
-                        // Reset imageRevealed on new day
-                        if Calendar.current.isDateInYesterday(store.appData.lastOpened) {
-                            store.appData.imageRevealed = false
-                        }
-
-                    } catch {
-                        fatalError("Error loading app data.")
-                    }
-                }
         }
     }
 }
+
+// TODO: If we ever want loading in the state, add in the following
+//.task {
+//    do {
+//        store.appData = try await Store.load()
+//
+//        // Reset imageRevealed on new day
+//        if Calendar.current.isDateInYesterday(store.appData.lastOpened) {
+//            store.appData.imageRevealed = false
+//        }
+//
+//    } catch {
+//        fatalError("Error loading app data.")
+//    }
+//}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		724815DD28403EB300D0D42C /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 724815DC28403EB300D0D42C /* ConfettiSwiftUI */; };
 		72D2C3772814CE62008071ED /* CatchYouThenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2C3762814CE62008071ED /* CatchYouThenApp.swift */; };
 		72D2C37B2814CE63008071ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D2C37A2814CE63008071ED /* Assets.xcassets */; };
 		72D2C37E2814CE63008071ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D2C37D2814CE63008071ED /* Preview Assets.xcassets */; };
@@ -127,6 +128,7 @@
 		72D2C4392814F28A008071ED /* IMG_5801.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_5801.HEIC; sourceTree = "<group>"; };
 		72D2C43A2814F28B008071ED /* IMG_9124.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9124.JPG; sourceTree = "<group>"; };
 		72D2C43B2814F28B008071ED /* IMG_1519.HEIC */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_1519.HEIC; sourceTree = "<group>"; };
+		72D2C44928156F9A008071ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724815DD28403EB300D0D42C /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +162,7 @@
 		72D2C3752814CE62008071ED /* CatchYouThen */ = {
 			isa = PBXGroup;
 			children = (
+				72D2C44928156F9A008071ED /* Info.plist */,
 				72D2C3DB2814E7FB008071ED /* Store.swift */,
 				72D2C3D82814E023008071ED /* Images */,
 				72D2C3762814CE62008071ED /* CatchYouThenApp.swift */,
@@ -253,6 +257,9 @@
 			dependencies = (
 			);
 			name = CatchYouThen;
+			packageProductDependencies = (
+				724815DC28403EB300D0D42C /* ConfettiSwiftUI */,
+			);
 			productName = CatchYouThen;
 			productReference = 72D2C3732814CE62008071ED /* CatchYouThen.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +288,9 @@
 				Base,
 			);
 			mainGroup = 72D2C36A2814CE62008071ED;
+			packageReferences = (
+				724815DB28403EB300D0D42C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 72D2C3742814CE62008071ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -494,9 +504,9 @@
 				DEVELOPMENT_TEAM = T45FMQN3A6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CatchYouThen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -523,9 +533,9 @@
 				DEVELOPMENT_TEAM = T45FMQN3A6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CatchYouThen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -563,6 +573,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		724815DB28403EB300D0D42C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		724815DC28403EB300D0D42C /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 724815DB28403EB300D0D42C /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72D2C36B2814CE62008071ED /* Project object */;
 }
