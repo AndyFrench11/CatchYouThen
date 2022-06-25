@@ -9,6 +9,7 @@ struct CatchYouThenApp: App {
             CircleView()
                 .edgesIgnoringSafeArea([.top, .bottom])
                 .environmentObject(store)
+                .preferredColorScheme(.dark)
         }
     }
 }

@@ -3,12 +3,14 @@ import Foundation
 class Store: ObservableObject {
 
     @Published var appData: AppData = AppData()
+    
+    private let endDateString = "2022/07/24"
 
      func getDaysRemaining() -> Int {
          _ = imageNames()
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
-        let endDate = formatter.date(from: "2022/06/15")
+        let endDate = formatter.date(from: endDateString)
         let calendar = Calendar(identifier: .iso8601)
         return calendar.numberOfDaysBetween(Date(), and: endDate!)
      }

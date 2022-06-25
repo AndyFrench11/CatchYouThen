@@ -10,12 +10,14 @@ struct CircleView: View {
     
     @ViewBuilder
     private func imageView() -> some View {
-        // TODO: Ensure size is always the same - geometry reader?
-        
-        Image(uiImage: UIImage(named: images[store.getDaysRemaining()])!)
-            .resizable()
-            .clipShape(Circle())
-            .aspectRatio(contentMode: .fit)
+        GeometryReader { reader in
+            Image(uiImage: UIImage(named: images[store.getDaysRemaining()])!)
+                .resizable()
+                .scaledToFill()
+                .frame(width: reader.size.width, height: reader.size.height)
+                .clipShape(Circle())
+       }
+            
     }
     
     var body: some View {
@@ -32,6 +34,7 @@ struct CircleView: View {
                         .foregroundColor(.green)
                     
                 }
+                .padding(.top, 32)
                 .transition(.scale(scale: 4.0))
             }
             
@@ -62,9 +65,8 @@ struct CircleView: View {
                 }
             }
             .confettiCannon(counter: $counter, num: 100, rainHeight: 1100, radius: 500)
-            
+            .padding(.horizontal, 16)
         }
-        .padding()
     }
     
 }
